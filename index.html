@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Dimension by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
     <head>
         <title>Hi, I'm Dan</title>
@@ -25,7 +20,7 @@
                         <div class="content">
                             <div class="inner">
                                 <h1>Hi, I'm Dan</h1>
-                                <p>I'm a passionate technologist and a former financial trader turned technologist. Currently, I'm exploring roles that blend my technical expertise with client engagement, particularly in technology-driven environments.</p>
+                                <p>I'm a passionate technologist and a former trader pivoting into the world of  Currently, I'm exploring roles that blend my technical expertise with client engagement, particularly in technology-driven environments.</p>
                             </div>
                         </div>
                         <nav>
@@ -45,24 +40,26 @@
                             <article id="intro">
                                 <h2 class="major">Intro</h2>
                                 <span class="image main"><img src="images/tradingdesk.png" alt="" /></span>
-                                <p>Beginning my career in high-stakes trading, I developed keen analytical skills and a deep understanding of market dynamics. Transitioning to technology, I've focused on solving complex technical problems, ensuring smooth application performance, and migrating essential services to the cloud.</p>
-                                <p>With a knack for blending technical solutions with user-centric approaches, I’m excited about the opportunities to drive innovation and efficiency in technology landscapes. test</p>
+                                <p>Beginning my career in high-stakes trading, I developed keen analytical skills and a deep understanding of market dynamics. Transitioning to technology, I've learned that I love building relationships with others and find myself searching for the next role where I can combine my interest in tech with finding solutions for challenging business problems.</p>
                             </article>
-
                         <!-- Work -->
-                            <article id="work">
-                                <h2 class="major">Work</h2>
-                                <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-                                <p>At Partners Group, I tackled global business user challenges, enhancing our fund and investment management platforms. Previously, as a Senior Trader at Gelber Group, I employed quantitative strategies to manage and optimize equity futures, contributing to sustainable portfolio growth.</p>
-                                <p>My project leadership includes spearheading the migration of business applications to AWS and developing automation tools that significantly improved operational efficiencies.</p>
-                            </article>
+                        <article id="work">
+                            <h2 class="major">Work</h2>
+                            <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+                            <p>Below are some of the projects I've worked on. For more of my work, feel free to visit my <a href="https://github.com/itsdanli" target="_blank">GitHub profile</a>.</p>
+                            <div id="github-projects" class="projects-container">
+                            </div>
+                        </article>
+
+
+
 
                         <!-- About -->
                             <article id="about">
                                 <h2 class="major">About</h2>
                                 <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-                                <p>I'm a graduate of the University of Illinois with a degree in Consumer Economics and Finance and a certification from the 42 Peer Learning Software Engineering School. My broad skill set spans across C programming, Python, SQL, and cloud technologies like AWS.</p>
-                                <p>Outside of work, I enjoy developing my own entrepreneurial projects, such as Firmconnect.io, a platform that connects consultancies and service providers, and managing a successful online business around customized tech products.</p>
+                                <p>I currently reside in Denver, Colorado after moving here from Chicago after a stint there post graduation. I'm a mix of homebody and adrenaline seeker where if I'm outside you can find me rock climbing, mountain biking, skiing or in the jiu-jitsu gym.</p>
+                                <p>While I used to be an active participant in markets in my previous role, today I am less so, but still find myself researching and learning about macroeconomics, geopolitics and behavioral economics.</p>
                             </article>
 
                         <!-- Contact -->
@@ -110,6 +107,32 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
+            <script>document.addEventListener('DOMContentLoaded', function () {
+                fetch('https://api.github.com/users/itsdanli/repos')
+                    .then(response => response.json())
+                    .then(data => {
+                        let projectsSection = document.getElementById('github-projects');
+                        data.forEach(repo => {
+
+                            if (!repo.fork) {
+                                let repoDiv = document.createElement('div');
+                                repoDiv.classList.add('project-item');
+            
+                                repoDiv.innerHTML = `
+                                    <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                                    <p>${repo.description ? repo.description : 'No description available.'}</p>
+                                `;
+            
+                                projectsSection.appendChild(repoDiv);
+                            }
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error fetching GitHub repositories:', error);
+                    });
+            });
+            </script>
+            
 
     </body>
 </html>
