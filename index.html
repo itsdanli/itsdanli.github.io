@@ -26,9 +26,10 @@
                         <nav>
                             <ul>
                                 <li><a href="#intro">Intro</a></li>
+                                <li><a href="#blog">Blog</a></li>
                                 <li><a href="#work">Work</a></li>
-                                <li><a href="#about">About</a></li>
                                 <li><a href="#contact">Contact</a></li>
+                                <li><a href="#habit-tracker">Habit Tracker</a></li>
                             </ul>
                         </nav>
                     </header>
@@ -39,33 +40,21 @@
                         <!-- Intro -->
                             <article id="intro">
                                 <h2 class="major">Intro</h2>
-                                <!--<span class="image main"><img src="images/tradingdesk.png" alt="" /></span>-->
-                                <p>After earning my degree from the University of Illinois at Urbana-Champaign, I launched my career in the fast-paced and high-pressure world of trading in Chicago. Over four years in this dynamic industry, I honed advanced analytical skills and gained a deep understanding of market dynamics. Success in trading demanded persistence, adaptability, and a sharp ability to learn on the fly.
-                                </p>
-                                <p>
-                                    During this time, I developed technical expertise in various programming languages and statistical evaluation methods to analyze and test trading strategies. I also designed tools for automation and created intuitive dashboards to visualize data. These experiences cultivated my passion for problem-solving and building innovative solutions—a passion that has shaped my professional journey ever since.
-                                </p>
-                                <p>After a period of reflection, I made the decision to relocate to Denver for a fresh start. While I continue to hold a strong interest in financial markets, I’ve focused on broadening my skill set to address challenges across industries. With companies increasingly reliant on cloud infrastructure, I am working to deepen my expertise in architecting scalable and efficient cloud-based solutions.</p>
-                                <p>This personal blog is my space to document my growth and share insights into the projects I’m working on. Whether you’ve found me through LinkedIn or my resume, I appreciate you taking the time to learn more about me.</p>
+                                <p>After earning my degree from the University of Illinois at Urbana-Champaign, I launched my career in the fast-paced and high-pressure world of trading in Chicago. Over four years in this dynamic industry, I honed advanced analytical skills and gained a deep understanding of market dynamics. Success in trading demanded persistence, adaptability, and a sharp ability to learn on the fly.</p>
                             </article>
+
                         <!-- Work -->
-                        <article id="work">
-                            <h2 class="major">Work</h2>
+                        <article id="blog">
+                            <h2 class="major">Blog</h2>
                             <span class="image main"><img src="images/pic02.jpg" alt="" /></span>
-                            <p>Below are some of the projects I've worked on. For more of my work, feel free to visit my <a href="https://github.com/itsdanli" target="_blank">GitHub profile</a>.</p>
-                            <div id="github-projects" class="projects-container">
-                            </div>
                         </article>
 
-
-
-
                         <!-- About -->
-                            <article id="about">
-                                <h2 class="major">About</h2>
+                            <article id="work">
+                                <h2 class="major">Work</h2>
                                 <span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-                                <p>I currently reside in Denver, Colorado after moving here from Chicago after a stint there post graduation. I'm a mix of homebody and adrenaline seeker where if I'm outside you can find me rock climbing, mountain biking, skiing or in the jiu-jitsu gym.</p>
-                                <p>While I used to be an active participant in markets in my previous role, today I am less so, but still find myself researching and learning about macroeconomics, geopolitics and behavioral economics.</p>
+                                <p>Below are some of the projects I've worked on. For more of my work, feel free to visit my <a href="https://github.com/itsdanli" target="_blank">GitHub profile</a>.</p>
+                                <div id="github-projects" class="projects-container"></div>
                             </article>
 
                         <!-- Contact -->
@@ -96,11 +85,26 @@
                                     <li><a href="https://github.com/itsdanli" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
                                 </ul>
                             </article>
+
+                        <!-- Habit Tracker -->
+                            <article id="habit-tracker">
+                                <h2 class="major">Habit Tracker</h2>
+                                <div class="container">
+                                    <div id="habit-form">
+                                        <input type="text" id="habit-name" placeholder="Enter a habit">
+                                        <input type="number" id="streak-goal" placeholder="Streak goal (days)">
+                                        <input type="text" id="reward" placeholder="Reward for goal">
+                                        <button onclick="addHabit()">Add Habit</button>
+                                    </div>
+                                    <div id="habit-list"></div>
+                                    <button onclick="resetAll()">Reset All</button>
+                                </div>
+                            </article>
+
                     </div>
 
                 <!-- Footer -->
-                    <footer id="footer">
-                    </footer>
+                    <footer id="footer"></footer>
 
             </div>
 
@@ -113,32 +117,74 @@
             <script src="assets/js/breakpoints.min.js"></script>
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
-            <script>document.addEventListener('DOMContentLoaded', function () {
-                fetch('https://api.github.com/users/itsdanli/repos')
-                    .then(response => response.json())
-                    .then(data => {
-                        let projectsSection = document.getElementById('github-projects');
-                        data.forEach(repo => {
 
-                            if (!repo.fork) {
-                                let repoDiv = document.createElement('div');
-                                repoDiv.classList.add('project-item');
-            
-                                repoDiv.innerHTML = `
-                                    <h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
-                                    <p>${repo.description ? repo.description : 'No description available.'}</p>
-                                `;
-            
-                                projectsSection.appendChild(repoDiv);
-                            }
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Error fetching GitHub repositories:', error);
+            <script>
+                document.addEventListener("DOMContentLoaded", loadHabits);
+
+                function addHabit() {
+                    let name = document.getElementById("habit-name").value;
+                    let goal = parseInt(document.getElementById("streak-goal").value);
+                    let reward = document.getElementById("reward").value;
+
+                    if (!name || !goal || !reward) {
+                        alert("Please fill all fields.");
+                        return;
+                    }
+
+                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
+                    habits.push({ name, goal, reward, streak: 0 });
+                    localStorage.setItem("habits", JSON.stringify(habits));
+
+                    document.getElementById("habit-name").value = "";
+                    document.getElementById("streak-goal").value = "";
+                    document.getElementById("reward").value = "";
+
+                    loadHabits();
+                }
+
+                function loadHabits() {
+                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
+                    let habitList = document.getElementById("habit-list");
+                    habitList.innerHTML = "";
+
+                    habits.forEach((habit, index) => {
+                        let habitDiv = document.createElement("div");
+                        habitDiv.classList.add("habit");
+                        habitDiv.innerHTML = `
+                            <span>${habit.name} - Streak: ${habit.streak}/${habit.goal} - Reward: ${habit.reward}</span>
+                            <button class="complete-btn" onclick="increaseStreak(${index})">✔</button>
+                            <button class="delete-btn" onclick="deleteHabit(${index})">✖</button>
+                        `;
+                        habitList.appendChild(habitDiv);
                     });
-            });
+                }
+
+                function increaseStreak(index) {
+                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
+                    
+                    if (habits[index].streak + 1 === habits[index].goal) {
+                        alert(`Congratulations! You earned your reward: ${habits[index].reward}`);
+                    }
+
+                    habits[index].streak += 1;
+                    localStorage.setItem("habits", JSON.stringify(habits));
+                    loadHabits();
+                }
+
+                function deleteHabit(index) {
+                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
+                    habits.splice(index, 1);
+                    localStorage.setItem("habits", JSON.stringify(habits));
+                    loadHabits();
+                }
+
+                function resetAll() {
+                    if (confirm("Are you sure you want to reset all habits?")) {
+                        localStorage.removeItem("habits");
+                        loadHabits();
+                    }
+                }
             </script>
-            
 
     </body>
 </html>
