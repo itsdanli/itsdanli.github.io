@@ -20,16 +20,15 @@
                         <div class="content">
                             <div class="inner">
                                 <h1>Hi, I'm Dan</h1>
-                                <p>If you're reading this, you've found me through LinkedIn or my Resume. Thanks for giving me a look here!</p>
+                                <p>If you're reading this, you've found me through LinkedIn or my Resume.</p>
+                                    <p>Thanks for giving me a visit!</p>
                             </div>
                         </div>
                         <nav>
                             <ul>
                                 <li><a href="#intro">Intro</a></li>
                                 <li><a href="#blog">Blog</a></li>
-                                <li><a href="#work">Work</a></li>
                                 <li><a href="#contact">Contact</a></li>
-                                <li><a href="#habit-tracker">Habit Tracker</a></li>
                             </ul>
                         </nav>
                     </header>
@@ -40,7 +39,9 @@
                         <!-- Intro -->
                             <article id="intro">
                                 <h2 class="major">Intro</h2>
-                                <p>After earning my degree from the University of Illinois at Urbana-Champaign, I launched my career in the fast-paced and high-pressure world of trading in Chicago. Over four years in this dynamic industry, I honed advanced analytical skills and gained a deep understanding of market dynamics. Success in trading demanded persistence, adaptability, and a sharp ability to learn on the fly.</p>
+                                <p>After starting my career as a trader in Chicago, I realized I wanted my work to have a greater impact. Leveraging the tech skills I built in trading, I pivoted to the tech industry.</p>
+                                <p>In early 2023, I was diagnosed with a cancerous tumor that required immediate surgery. Navigating the broken U.S. healthcare system—facing denied claims, endless paperwork, and bureaucracy—was eye-opening. That experience fueled my drive to contribute to meaningful change in healthcare.</p>
+                                <p>Now, I’m exploring opportunities where I can apply my analytical skills and problem-solving mindset to industries that need real change. I'm especially drawn to healthcare and tech, where smarter systems and better solutions can directly improve lives. More than anything, I want to work on problems worth solving.</p>
                             </article>
 
                         <!-- Work -->
@@ -60,19 +61,19 @@
                         <!-- Contact -->
                             <article id="contact">
                                 <h2 class="major">Contact</h2>
-                                <form method="post" action="#">
+                                <form method="POST" action="https://formspree.io/f/xbldnjkp">
                                     <div class="fields">
                                         <div class="field half">
                                             <label for="name">Name</label>
-                                            <input type="text" name="name" id="name" />
+                                            <input type="text" name="name" id="name" required />
                                         </div>
                                         <div class="field half">
                                             <label for="email">Email</label>
-                                            <input type="text" name="email" id="email" />
+                                            <input type="email" name="email" id="email" required />
                                         </div>
                                         <div class="field">
                                             <label for="message">Message</label>
-                                            <textarea name="message" id="message" rows="4"></textarea>
+                                            <textarea name="message" id="message" rows="4" required></textarea>
                                         </div>
                                     </div>
                                     <ul class="actions">
@@ -86,20 +87,6 @@
                                 </ul>
                             </article>
 
-                        <!-- Habit Tracker -->
-                            <article id="habit-tracker">
-                                <h2 class="major">Habit Tracker</h2>
-                                <div class="container">
-                                    <div id="habit-form">
-                                        <input type="text" id="habit-name" placeholder="Enter a habit">
-                                        <input type="number" id="streak-goal" placeholder="Streak goal (days)">
-                                        <input type="text" id="reward" placeholder="Reward for goal">
-                                        <button onclick="addHabit()">Add Habit</button>
-                                    </div>
-                                    <div id="habit-list"></div>
-                                    <button onclick="resetAll()">Reset All</button>
-                                </div>
-                            </article>
 
                     </div>
 
@@ -118,73 +105,6 @@
             <script src="assets/js/util.js"></script>
             <script src="assets/js/main.js"></script>
 
-            <script>
-                document.addEventListener("DOMContentLoaded", loadHabits);
-
-                function addHabit() {
-                    let name = document.getElementById("habit-name").value;
-                    let goal = parseInt(document.getElementById("streak-goal").value);
-                    let reward = document.getElementById("reward").value;
-
-                    if (!name || !goal || !reward) {
-                        alert("Please fill all fields.");
-                        return;
-                    }
-
-                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
-                    habits.push({ name, goal, reward, streak: 0 });
-                    localStorage.setItem("habits", JSON.stringify(habits));
-
-                    document.getElementById("habit-name").value = "";
-                    document.getElementById("streak-goal").value = "";
-                    document.getElementById("reward").value = "";
-
-                    loadHabits();
-                }
-
-                function loadHabits() {
-                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
-                    let habitList = document.getElementById("habit-list");
-                    habitList.innerHTML = "";
-
-                    habits.forEach((habit, index) => {
-                        let habitDiv = document.createElement("div");
-                        habitDiv.classList.add("habit");
-                        habitDiv.innerHTML = `
-                            <span>${habit.name} - Streak: ${habit.streak}/${habit.goal} - Reward: ${habit.reward}</span>
-                            <button class="complete-btn" onclick="increaseStreak(${index})">✔</button>
-                            <button class="delete-btn" onclick="deleteHabit(${index})">✖</button>
-                        `;
-                        habitList.appendChild(habitDiv);
-                    });
-                }
-
-                function increaseStreak(index) {
-                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
-                    
-                    if (habits[index].streak + 1 === habits[index].goal) {
-                        alert(`Congratulations! You earned your reward: ${habits[index].reward}`);
-                    }
-
-                    habits[index].streak += 1;
-                    localStorage.setItem("habits", JSON.stringify(habits));
-                    loadHabits();
-                }
-
-                function deleteHabit(index) {
-                    let habits = JSON.parse(localStorage.getItem("habits")) || [];
-                    habits.splice(index, 1);
-                    localStorage.setItem("habits", JSON.stringify(habits));
-                    loadHabits();
-                }
-
-                function resetAll() {
-                    if (confirm("Are you sure you want to reset all habits?")) {
-                        localStorage.removeItem("habits");
-                        loadHabits();
-                    }
-                }
-            </script>
 
     </body>
 </html>
