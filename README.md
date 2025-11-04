@@ -136,17 +136,23 @@ Edit `client/src/pages/Home.tsx` to update:
 
 This site uses [Formspree](https://formspree.io) for contact form submissions.
 
+**Your form is already configured!** Form ID: `meopbbye`
+
 #### Local Development
 
-1. Create a free account at [formspree.io](https://formspree.io)
-2. Create a new form and copy your form ID (e.g., `xyzabc123`)
-3. Create a `.env` file in the root directory:
+The contact form is already set up with the Formspree endpoint `https://formspree.io/f/meopbbye`. To use it locally:
 
-```bash
-VITE_FORMSPREE_ID=your_form_id_here
-```
+1. Copy `.env.example` to `.env`:
+   ```bash
+   cp .env.example .env
+   ```
 
-4. The form will now send real emails when you test locally
+2. The `.env` file already contains your form ID:
+   ```bash
+   VITE_FORMSPREE_ID=meopbbye
+   ```
+
+3. The form will now send real emails when you test locally
 
 **Note:** The form works in demo mode if `VITE_FORMSPREE_ID` is not set.
 
@@ -157,8 +163,8 @@ For GitHub Pages deployment with GitHub Actions:
 1. Go to your repository Settings → Secrets and variables → Actions
 2. Add a new repository secret:
    - Name: `FORMSPREE_ID`
-   - Value: Your Formspree form ID
-3. Update your `.github/workflows/deploy.yml` to inject the environment variable during build:
+   - Value: `meopbbye` (your configured form ID)
+3. The `.github/workflows/deploy.yml` already includes the environment variable injection:
 
 ```yaml
 - name: Build
