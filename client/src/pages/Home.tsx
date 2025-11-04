@@ -13,7 +13,7 @@ export default function Home() {
               Hi, I'm Dan
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8" data-testid="text-hero-subtitle">
-              A software engineer passionate about building elegant solutions to complex problems.
+              A technologist passionate about building elegant solutions to complex problems.
               I create performant, accessible web applications that users love.
             </p>
             <div className="flex flex-wrap gap-4">
