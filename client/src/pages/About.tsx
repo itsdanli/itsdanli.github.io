@@ -24,7 +24,7 @@ export default function About() {
   ];
 
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" tabIndex={-1} className="flex-1">
       <div className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <AnimatedSection>
           <h1 className="text-3xl md:text-4xl font-bold mb-8" data-testid="text-about-heading">

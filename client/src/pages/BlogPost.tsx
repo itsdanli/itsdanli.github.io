@@ -41,7 +41,7 @@ export default function BlogPost() {
   const formattedDate = format(new Date(post.date), "MMMM dd, yyyy");
 
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" tabIndex={-1} className="flex-1">
       <article className="max-w-4xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <AnimatedSection>
           <Button variant="ghost" asChild className="mb-8" data-testid="button-back-to-blog">

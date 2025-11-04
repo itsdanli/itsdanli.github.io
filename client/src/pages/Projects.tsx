@@ -4,7 +4,7 @@ import { projects } from "@/data/projects";
 
 export default function Projects() {
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" tabIndex={-1} className="flex-1">
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-24">
         <AnimatedSection>
           <div className="mb-12">

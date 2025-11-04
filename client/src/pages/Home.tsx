@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 
 export default function Home() {
   return (
-    <main id="main-content" className="flex-1">
+    <main id="main-content" tabIndex={-1} className="flex-1">
       <AnimatedSection className="py-24 md:py-32 lg:py-40">
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div className="max-w-3xl">
