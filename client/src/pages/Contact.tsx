@@ -6,6 +6,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { Alert, AlertDescription } from "@/components/ui/alert";
+
+// Formspree form ID from environment variable
+// Set VITE_FORMSPREE_ID in your .env file or deployment environment
+const FORMSPREE_FORM_ID = import.meta.env.VITE_FORMSPREE_ID;
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -14,22 +19,60 @@ export default function Contact() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    console.log("Form submitted:", formData);
+    try {
+      // If Formspree is configured, use it; otherwise show demo message
+      if (!FORMSPREE_FORM_ID) {
+        // Demo mode - just show success message
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        setSubmitStatus("success");
+        toast({
+          title: "Demo Mode",
+          description: "Form submission works! Set VITE_FORMSPREE_ID environment variable to enable real email delivery.",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        // Real Formspree submission
+        const response = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
 
-    setTimeout(() => {
+        const data = await response.json();
+
+        if (response.ok) {
+          setSubmitStatus("success");
+          toast({
+            title: "Message sent!",
+            description: "Thank you for reaching out. I'll get back to you soon.",
+          });
+          setFormData({ name: "", email: "", message: "" });
+        } else {
+          throw new Error(data.error || "Form submission failed");
+        }
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus("error");
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        variant: "destructive",
+        title: "Error",
+        description: "Failed to send message. Please try again or contact me directly via email.",
       });
-      setFormData({ name: "", email: "", message: "" });
+    } finally {
       setIsSubmitting(false);
-    }, 1000);
+    }
   };
 
   return (
@@ -49,10 +92,27 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           <AnimatedSection delay={100}>
             <form onSubmit={handleSubmit} className="space-y-6">
+              {submitStatus === "success" && (
+                <Alert className="bg-primary/10 border-primary/20">
+                  <AlertDescription className="text-sm">
+                    Message sent successfully! I'll get back to you soon.
+                  </AlertDescription>
+                </Alert>
+              )}
+
+              {submitStatus === "error" && (
+                <Alert variant="destructive">
+                  <AlertDescription className="text-sm">
+                    Failed to send message. Please try emailing me directly.
+                  </AlertDescription>
+                </Alert>
+              )}
+
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
                 <Input
                   id="name"
+                  name="name"
                   type="text"
                   placeholder="Your name"
                   value={formData.name}
@@ -66,6 +126,7 @@ export default function Contact() {
                 <Label htmlFor="email">Email</Label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   placeholder="your.email@example.com"
                   value={formData.email}
@@ -79,6 +140,7 @@ export default function Contact() {
                 <Label htmlFor="message">Message</Label>
                 <Textarea
                   id="message"
+                  name="message"
                   placeholder="Your message..."
                   rows={6}
                   value={formData.message}
@@ -121,18 +183,27 @@ export default function Contact() {
               </div>
 
               <div className="border-t pt-8">
+                <h3 className="font-semibold text-foreground mb-2">Setup Instructions</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  <strong className="text-foreground">Note:</strong> This contact form uses Formspree
-                  for handling submissions. To set it up, create a free account at{" "}
+                  This contact form integrates with{" "}
                   <a
                     href="https://formspree.io"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    formspree.io
-                  </a>{" "}
-                  and update the form action in the code.
+                    Formspree
+                  </a>
+                  . To enable email delivery:
+                </p>
+                <ol className="text-sm text-muted-foreground mt-3 space-y-2 list-decimal list-inside">
+                  <li>Create a free account at formspree.io</li>
+                  <li>Create a new form and copy your form ID</li>
+                  <li>Add <code className="text-xs bg-muted px-1 py-0.5 rounded">VITE_FORMSPREE_ID</code> to your .env file</li>
+                  <li>Update the email address above to your real email</li>
+                </ol>
+                <p className="text-sm text-muted-foreground mt-3">
+                  For GitHub Pages: Add the form ID as a repository secret and update your deployment workflow to inject it as an environment variable during build.
                 </p>
               </div>
             </div>

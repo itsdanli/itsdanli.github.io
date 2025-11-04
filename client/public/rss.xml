@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dan Li's Blog</title>
+    <link>https://itsdanli.github.io/blog</link>
+    <description>Thoughts on web development, software engineering, and technology</description>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jan 2025 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://itsdanli.github.io/rss.xml" rel="self" type="application/rss+xml"/>
+    
+    <item>
+      <title>Getting Started with React in 2025</title>
+      <link>https://itsdanli.github.io/blog/getting-started-with-react</link>
+      <guid>https://itsdanli.github.io/blog/getting-started-with-react</guid>
+      <pubDate>Mon, 15 Jan 2025 00:00:00 GMT</pubDate>
+      <description>A comprehensive guide to building modern React applications with the latest best practices and tools.</description>
+      <category>React</category>
+      <category>JavaScript</category>
+      <category>Web Development</category>
+    </item>
+    
+    <item>
+      <title>TypeScript Tips and Tricks for Better Code</title>
+      <link>https://itsdanli.github.io/blog/typescript-tips-and-tricks</link>
+      <guid>https://itsdanli.github.io/blog/typescript-tips-and-tricks</guid>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 GMT</pubDate>
+      <description>Learn advanced TypeScript patterns and techniques to write more maintainable and type-safe code.</description>
+      <category>TypeScript</category>
+      <category>JavaScript</category>
+      <category>Best Practices</category>
+    </item>
+  </channel>
+</rss>
