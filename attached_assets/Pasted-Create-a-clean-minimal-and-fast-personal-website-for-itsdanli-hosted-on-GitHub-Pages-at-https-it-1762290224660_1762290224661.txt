@@ -1,0 +1,162 @@
+Create a clean, minimal, and fast personal website for itsdanli hosted on GitHub Pages at https://itsdanli.github.io
+. Use a modern static stack and keep the codebase simple and well-documented.
+
+Tech & structure
+
+Framework: Astro (preferred). Use file-based routing, Markdown/MDX for content, and built-in image optimization.
+
+Styling: Tailwind CSS (or lightweight CSS modules) with a minimal, elegant aesthetic. Include a light/dark mode toggle.
+
+Animations: subtle only—fade/slide in on scroll (IntersectionObserver + CSS), gentle hover lifts, animated link underline. Respect prefers-reduced-motion.
+
+Sections/pages:
+
+Home: concise intro/hero, short bio, call-to-action buttons to Projects and Blog.
+
+Projects: grid of cards sourced from a projects.json (or .ts) data file. Each card has title, short description, tech stack tags, links (GitHub, live demo).
+
+Blog: posts in Markdown/MDX with tags, automatic listing page, pagination, RSS feed, and per-post pages. Include sample posts.
+
+Contact: simple contact form using a static-friendly provider (e.g., Formspree) with validation + success/error states. Also list email as a fallback.
+
+About (optional but nice): slightly longer bio, photo, and timeline.
+
+Global:
+
+Header with sticky nav + mobile menu.
+
+Footer with copyright, theme toggle, and social icons.
+
+Social links:
+
+GitHub: https://github.com/itsdanli
+
+LinkedIn: <YOUR_LINKEDIN_URL>
+
+SEO & performance:
+
+Proper <title>, meta descriptions, canonical URLs, Open Graph/Twitter cards, sitemap.xml, and robots.txt.
+
+Accessible landmarks, color contrast, focus styles, skip-to-content link.
+
+Lighthouse targets ≥ 95 for Performance/Accessibility/Best Practices/SEO.
+
+Content scaffolding:
+
+src/content/blog/*.md(x) with frontmatter: title, description, date, tags, coverImage.
+
+src/data/projects.(json|ts) with array of project objects.
+
+Sample content: 2–3 project entries and 2 sample blog posts.
+
+Design language:
+
+Plenty of whitespace, typographic scale, system/variable font stack.
+
+One accent color; neutral grays; crisp cards with subtle shadow and rounded corners.
+
+Nice touches:
+
+Code syntax highlighting in blog (Shiki or Prism).
+
+Tag pages (list posts by tag).
+
+404 page.
+
+Optional analytics: Plausible (no cookies).
+
+Tooling & quality:
+
+Prettier + ESLint configured.
+
+README.md with clear dev, content, and deploy docs.
+
+MIT License.
+
+GitHub Pages deployment
+
+Repo name: itsdanli.github.io (user site).
+
+Add GitHub Actions workflow for Astro:
+
+Build on push to main.
+
+Deploy to GitHub Pages (Pages → Build from GitHub Actions).
+
+Ensure Astro site config is https://itsdanli.github.io/.
+
+Include instructions in the README to:
+
+npm i
+
+npm run dev
+
+npm run build
+
+npm run preview
+
+Deliverables
+
+Astro project with:
+
+src/pages/index.astro (Home), projects.astro, blog/index.astro, contact.astro, about.astro (optional), 404.astro
+
+src/content/blog/ sample posts
+
+src/components/ (Header, Footer, ThemeToggle, PostCard, ProjectCard, Pagination, TagList)
+
+src/data/projects.(json|ts) sample entries
+
+public/ favicons & social share image
+
+Subtle animation utilities (CSS classes + small IntersectionObserver helper).
+
+Accessible contact form wired to Formspree (put a placeholder form ID and document where to change it).
+
+SEO utilities (OG image defaults, metadata helper).
+
+RSS feed, sitemap, robots.
+
+GitHub Actions workflow file for Pages deployment.
+
+Clear README.md with:
+
+How to add a project (edit src/data/projects.*)
+
+How to add a blog post (drop a Markdown file with frontmatter)
+
+How to update social links (Header/Footer config)
+
+How to set the site URL in astro.config.mjs
+
+How to turn analytics on/off
+
+Ensure all links to social profiles are set:
+
+GitHub: https://github.com/itsdanli
+
+LinkedIn: <YOUR_LINKEDIN_URL>
+
+Site base URL: https://itsdanli.github.io
+
+Design cues to emulate
+
+Clean spacing, big readable headings, comfortable line length, minimal color palette.
+
+Motion is tasteful and optional (respect reduced motion).
+
+Keep bundle small; no heavy JS frameworks for basic interactions.
+
+Acceptance criteria checklist
+
+✅ Builds locally and deploys on push to main to https://itsdanli.github.io
+
+✅ Responsive and keyboard-navigable
+
+✅ Home, Projects, Blog (with RSS + tags + pagination), Contact (Formspree), 404 all working
+
+✅ Social links (GitHub + LinkedIn) visible in header/footer
+
+✅ Lighthouse ≥ 95 across categories
+
+✅ README explains everything a newcomer needs
