@@ -182,30 +182,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="border-t pt-8">
-                <h3 className="font-semibold text-foreground mb-2">Setup Instructions</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  This contact form integrates with{" "}
-                  <a
-                    href="https://formspree.io"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary hover:underline"
-                  >
-                    Formspree
-                  </a>
-                  . To enable email delivery:
-                </p>
-                <ol className="text-sm text-muted-foreground mt-3 space-y-2 list-decimal list-inside">
-                  <li>Create a free account at formspree.io</li>
-                  <li>Create a new form and copy your form ID</li>
-                  <li>Add <code className="text-xs bg-muted px-1 py-0.5 rounded">VITE_FORMSPREE_ID</code> to your .env file</li>
-                  <li>Update the email address above to your real email</li>
-                </ol>
-                <p className="text-sm text-muted-foreground mt-3">
-                  For GitHub Pages: Add the form ID as a repository secret and update your deployment workflow to inject it as an environment variable during build.
-                </p>
-              </div>
             </div>
           </AnimatedSection>
         </div>

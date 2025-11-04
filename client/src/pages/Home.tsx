@@ -10,7 +10,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 md:px-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6" data-testid="text-hero-title">
-              Hi, I'm Dan Li
+              Hi, I'm Dan
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8" data-testid="text-hero-subtitle">
               A software engineer passionate about building elegant solutions to complex problems.

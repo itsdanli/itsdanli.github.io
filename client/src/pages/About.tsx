@@ -4,23 +4,45 @@ import { Card } from "@/components/ui/card";
 export default function About() {
   const timeline = [
     {
-      year: "2024-Present",
-      title: "Senior Software Engineer",
-      company: "Tech Company",
-      description: "Leading frontend development and mentoring junior developers.",
+      year: "2025–Present",
+      title: "Technical Customer Success Manager",
+      company: "Plenful",
+      description:
+        "Own the technical relationship for 8+ enterprise health systems. Design Python/SQL automations and visualizations that expand 340B claims audit coverage to ~100%, reduce manual review, and surface missed revenue ($500k+ identified). Translate requirements into scalable, production-ready workflows.",
     },
     {
-      year: "2022-2024",
-      title: "Software Engineer",
-      company: "Startup Inc.",
-      description: "Built and scaled web applications serving thousands of users.",
+      year: "2023–2025",
+      title: "Application Operations Engineer",
+      company: "Partners Group",
+      description:
+        "Automated complex ETL processes with Python and SQL; drove durable fixes via root-cause analysis in ServiceNow. Led user training and authored platform documentation to improve adoption of the eFront ecosystem.",
     },
     {
-      year: "2020-2022",
-      title: "Junior Developer",
-      company: "Digital Agency",
-      description: "Developed client websites and learned full-stack development.",
+      year: "2020–2023",
+      title: "Trader",
+      company: "Gelber Group",
+      description:
+        "Built a Python backtesting engine and analytics dashboards to optimize hedge ratios and execution; reduced transaction costs and accelerated data-driven decision making for the team.",
     },
+  ];
+
+  const skills = [
+    // Languages & Data
+    "Python",
+    "SQL (Postgres, MS SQL Server)",
+    "Bash",
+    "HTML",
+    // Platforms & Tools
+    "AWS",
+    "GitLab",
+    "Jira",
+    "Confluence",
+    "ServiceNow",
+    "Control-M",
+    "Excel",
+    // Focus Areas
+    "Data Automation",
+    "Data Visualization"
   ];
 
   return (
@@ -36,19 +58,18 @@ export default function About() {
           <AnimatedSection delay={100}>
             <div className="space-y-6 text-lg leading-relaxed">
               <p className="text-muted-foreground">
-                I'm a software engineer with a passion for creating beautiful, performant web
-                applications. My journey in tech started with curiosity about how websites work,
-                and has evolved into a career focused on building products that make a difference.
+                I’m <strong>Dan Li</strong>, a <strong>Technical Customer Success Manager at Plenful</strong>. I design and implement
+                Python/SQL data automations and visualization pipelines that improve 340B compliance and operational efficiency
+                for enterprise health systems.
               </p>
               <p className="text-muted-foreground">
-                I specialize in frontend development with React and TypeScript, but I'm equally
-                comfortable working across the full stack. I believe in writing clean, maintainable
-                code and creating experiences that users love.
+                My background spans finance and automation—trading equity futures at Gelber Group, then building ETL automation
+                and platform operations at Partners Group. Across roles, I focus on translating complex requirements into reliable,
+                scalable systems that create measurable impact.
               </p>
               <p className="text-muted-foreground">
-                Beyond coding, I'm an advocate for web accessibility, performance optimization,
-                and open source. I regularly contribute to open source projects and share my
-                knowledge through blog posts and community engagement.
+                Current interests: expanding audit coverage with deterministic rule engines, reducing manual review time with
+                clear exception surfacing, and tightening feedback loops between end users, product, and engineering.
               </p>
             </div>
           </AnimatedSection>
@@ -69,9 +90,7 @@ export default function About() {
                         <div className="flex-1">
                           <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
                           <div className="text-muted-foreground mb-2">{item.company}</div>
-                          <p className="text-muted-foreground leading-relaxed">
-                            {item.description}
-                          </p>
+                          <p className="text-muted-foreground leading-relaxed">{item.description}</p>
                         </div>
                       </div>
                     </Card>
@@ -83,20 +102,13 @@ export default function About() {
 
           <AnimatedSection delay={600}>
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-6">Skills & Technologies</h2>
+              <h2 className="text-2xl md:text-3xl font-bold mb-6">Skills &amp; Technologies</h2>
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {[
-                  "React",
-                  "TypeScript",
-                  "Node.js",
-                  "Next.js",
-                  "Tailwind CSS",
-                  "PostgreSQL",
-                  "Git",
-                  "Docker",
-                  "AWS",
-                ].map((skill, index) => (
-                  <Card key={skill} className="p-4 text-center hover-elevate transition-all duration-200">
+                {skills.map((skill) => (
+                  <Card
+                    key={skill}
+                    className="p-4 text-center hover-elevate transition-all duration-200"
+                  >
                     <span className="font-medium">{skill}</span>
                   </Card>
                 ))}

@@ -35,7 +35,7 @@ export function Footer() {
               data-testid="link-linkedin"
             >
               <a
-                href="https://linkedin.com/in/YOUR_LINKEDIN_USERNAME"
+                href="https://linkedin.com/in/itsdanli"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
