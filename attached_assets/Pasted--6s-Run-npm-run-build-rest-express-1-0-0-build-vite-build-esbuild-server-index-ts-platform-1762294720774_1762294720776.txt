@@ -1,0 +1,58 @@
+
+6s
+Run npm run build
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+vite v5.4.20 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 13 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+✓ 3062 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/public/index.html                     0.98 kB │ gzip:   0.44 kB
+../dist/public/assets/index-CL5P_PlE.css     92.62 kB │ gzip:  14.25 kB
+../dist/public/assets/index-BVXmYooW.js   1,114.12 kB │ gzip: 373.46 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.93s
+Error: R] The entry point "server/index.ts" cannot be marked as external
+
+1 error
+Error: Process completed with exit code 1.
+Run npm run build
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+vite v5.4.20 building for production...
+transforming...
+Browserslist: browsers data (caniuse-lite) is 13 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+A PostCSS plugin did not pass the `from` option to `postcss.parse`. This may cause imported assets to be incorrectly transformed. If you've recently added a PostCSS plugin that raised this warning, please contact the package author to fix the issue.
+✓ 3062 modules transformed.
+rendering chunks...
+computing gzip size...
+../dist/public/index.html                     0.98 kB │ gzip:   0.44 kB
+../dist/public/assets/index-CL5P_PlE.css     92.62 kB │ gzip:  14.25 kB
+../dist/public/assets/index-BVXmYooW.js   1,114.12 kB │ gzip: 373.46 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.93s
+Error: R] The entry point "server/index.ts" cannot be marked as external
+
+1 error
+Error: Process completed with exit code 1.

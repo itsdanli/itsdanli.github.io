@@ -91,6 +91,7 @@ The site will automatically rebuild and deploy within 2-3 minutes.
 - Check the Actions tab for error logs
 - Ensure `FORMSPREE_ID` secret is set correctly
 - Verify all dependencies in package.json
+- Note: The deployment uses `npx vite build` which only builds static files (no server code)
 
 ### Contact Form Not Working
 - Verify Formspree secret is set: `FORMSPREE_ID=meopbbye`
