@@ -1,194 +1,167 @@
 import type { BlogPostMeta } from "@shared/schema";
 
 export const blogPosts: BlogPostMeta[] = [
-  {
-    slug: "getting-started-with-react",
-    title: "Getting Started with React in 2025",
-    description: "A comprehensive guide to building modern React applications with the latest best practices and tools.",
-    date: "2025-01-15",
-    tags: ["React", "JavaScript", "Web Development"],
-    readTime: 8,
-  },
-  {
-    slug: "typescript-tips-and-tricks",
-    title: "TypeScript Tips and Tricks for Better Code",
-    description: "Learn advanced TypeScript patterns and techniques to write more maintainable and type-safe code.",
-    date: "2024-12-20",
-    tags: ["TypeScript", "JavaScript", "Best Practices"],
-    readTime: 6,
-  },
+{ slug: "letters-from-a-stoic-notes", title: "Letters from a Stoic — Field Notes on Living Well in a Noisy World", description: "My distilled takeaways from Seneca: fear vs. hope, friendship, wealth, crowds, and how to practice a durable kind of freedom.", date: "2025-11-05", tags: ["Stoicism", "Philosophy", "Book Notes", "Seneca"], readTime: 8 },
 ];
 
 export const blogPostContent: Record<string, string> = {
-  "getting-started-with-react": `
-# Getting Started with React in 2025
+"letters-from-a-stoic-notes": `
 
-React continues to be one of the most popular JavaScript libraries for building user interfaces. In this guide, we'll explore the latest features and best practices for building modern React applications.
+# Letters from a Stoic — Field Notes on Living Well in a Noisy World
 
-## Why React?
+Seneca writes like someone debugging human life. These are my notes and reflections — filtered through my bias for systems, incentives, and practice.
 
-React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.
+## Thesis in a Sentence
 
-### Key Benefits
+**Freedom comes from limiting desires, training attention to the present, and surrounding yourself with the few who make you better — not from fortune, status, or crowds.**
 
-- **Component-Based**: Build encapsulated components that manage their own state
-- **Learn Once, Write Anywhere**: Develop new features without rewriting existing code
-- **Large Ecosystem**: Benefit from thousands of open-source libraries and tools
+---
 
-## Getting Started
+## Core Ideas (my words, Seneca’s spine)
 
-To create a new React application, you can use Vite:
+### 1) Fear and Hope Are the Same Error
 
-\`\`\`bash
-npm create vite@latest my-app -- --template react-ts
-cd my-app
-npm install
-npm run dev
-\`\`\`
+* *“Cease to hope and you will cease to fear.”* Both are projections. They suspend the mind in a future that never arrives.
+* Practice: return to the **present task**. If I catch myself forecasting outcomes, I swap to **next concrete action**.
 
-This will set up a new React project with TypeScript support and a modern build system.
+### 2) Admire People, Not Things
 
-## Modern React Patterns
+* Guests should admire **how we live**, not what we own.
+* Treat earthenware like silver; treat silver like earthenware — translation: **handle basics with respect; handle luxuries without attachment**.
 
-### Hooks
+### 3) Limit Desire → Cure Fear
 
-Hooks let you use state and other React features without writing a class:
+* Desires that cannot “come to rest” are counterfeit. Natural desires terminate (hunger, warmth); vanity does not.
+* Litmus test: *Can this desire ever feel complete?* If not, it’s an algorithm for anxiety.
 
-\`\`\`tsx
-import { useState, useEffect } from 'react';
+### 4) Crowd Dynamics Corrupt Character
 
-function Example() {
-  const [count, setCount] = useState(0);
+* “A single man is a crowd; a crowd is a single man.” Exposure is a vector: **vices scale through proximity**.
+* Default posture: **avoid mass moods**. Choose **small circles** where improvement is mutual.
 
-  useEffect(() => {
-    document.title = \`You clicked \${count} times\`;
-  }, [count]);
+### 5) Friendship as a Practice, Not a Transaction
 
-  return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>
-        Click me
-      </button>
-    </div>
-  );
-}
-\`\`\`
+* Fair-weather friendships flee at the first margin call.
+* Sow > harvest: the **act of befriending** is richer than the possession of “having friends.”
+* Rule: never recruit friends for utility; else, **utility will dissolve them**.
 
-### Custom Hooks
+### 6) Wealth Without Fear (or: Own things that can’t own you)
 
-Create reusable logic with custom hooks:
+* It’s fine to possess riches; the danger is **being possessed by the fear of losing them**.
+* Train the counterfactual: *Could I live well without this?* If yes, wealth becomes optional, not oxygen.
 
-\`\`\`tsx
-function useWindowSize() {
-  const [size, setSize] = useState({ width: 0, height: 0 });
+### 7) Death as a Daily Drill
 
-  useEffect(() => {
-    function updateSize() {
-      setSize({ width: window.innerWidth, height: window.innerHeight });
-    }
-    window.addEventListener('resize', updateSize);
-    updateSize();
-    return () => window.removeEventListener('resize', updateSize);
-  }, []);
+* Rehearsing death is rehearsing freedom. Familiarity erases the slave-master called **fear**.
+* Audit: are my “brave stances” real or performance? Death is the ultimate code review.
 
-  return size;
-}
-\`\`\`
+### 8) Change of Place ≠ Change of Self
 
-## Conclusion
+* Travel is a new viewport, not a new operating system.
+* If I move without inner refactor, I just **re-deploy the same bugs** in a different region.
 
-React in 2025 is more powerful than ever. With modern tooling, improved performance, and a thriving ecosystem, it's an excellent choice for your next project.
+### 9) Philosophy Is Operational
 
-Happy coding!
-  `,
-  "typescript-tips-and-tricks": `
-# TypeScript Tips and Tricks for Better Code
+* Not wordplay: it **orders life**, **regulates conduct**, and tells you **what to do or leave undone**.
+* Metrics are behavioral: sleep, food, speech, anger, generosity — not quotes remembered.
 
-TypeScript has become essential for building large-scale JavaScript applications. Let's explore some advanced patterns that will help you write better, more maintainable code.
+---
 
-## Type Inference
+## Practices I’m Keeping
 
-TypeScript's type inference is powerful. Let it work for you:
+1. **Present Tense Protocol**
 
-\`\`\`typescript
-// Let TypeScript infer the type
-const numbers = [1, 2, 3]; // number[]
+   * When I notice hope/fear loops, I ask: *What’s the smallest present-tense move?* Send the email, write the paragraph, make the call.
 
-// No need to explicitly type this
-const doubled = numbers.map(n => n * 2);
-\`\`\`
+2. **Poverty Rehearsal**
 
-## Utility Types
+   * Periodically live with less on purpose: simple food, simple clothes, simple routine. This deletes dependency and resets the baseline.
 
-TypeScript provides several utility types to help you transform types:
+3. **Friendship Filter**
 
-### Partial<T>
+   * Pick for **virtue-acceleration**, not access. If either of us grows more honest, calmer, or braver from contact, we keep compounding.
 
-Makes all properties optional:
+4. **Crowd Hygiene**
 
-\`\`\`typescript
-interface User {
-  name: string;
-  email: string;
-  age: number;
-}
+   * Limit exposure to the moral noise floor. High-signal conversation beats any algorithmic feed.
 
-function updateUser(user: User, updates: Partial<User>) {
-  return { ...user, ...updates };
-}
-\`\`\`
+5. **Attachment Audit**
 
-### Pick<T, K>
+   * For any “win” delivered by Fortune: label it **a loan, not a property**. If it can be taken, it never was me.
 
-Create a type by picking specific properties:
+6. **Anger as Insanity, Not Spice**
 
-\`\`\`typescript
-type UserPreview = Pick<User, 'name' | 'email'>;
-\`\`\`
+   * Don’t goal-seek “moderate anger.” Treat it as a full-system failure; reboot to sanity.
 
-## Discriminated Unions
+7. **Evening Self-Review**
 
-Create type-safe state machines:
+   * Daily court: *What did I do well? What did I do poorly? What will I do differently?* Be my own prosecutor and defender.
 
-\`\`\`typescript
-type LoadingState = 
-  | { status: 'idle' }
-  | { status: 'loading' }
-  | { status: 'success'; data: string }
-  | { status: 'error'; error: Error };
+---
 
-function handleState(state: LoadingState) {
-  switch (state.status) {
-    case 'idle':
-      return 'Not started';
-    case 'loading':
-      return 'Loading...';
-    case 'success':
-      return state.data; // TypeScript knows data exists
-    case 'error':
-      return state.error.message; // TypeScript knows error exists
-  }
-}
-\`\`\`
+## Notes by Theme (condensed from margins)
 
-## Const Assertions
+### On Home & Status
 
-Use \`as const\` for literal types:
+* The “good life” doesn’t require marble; **thatch roofs keep out rain** just as well. Only the **spirit** is admirable when it’s firm against the external.
 
-\`\`\`typescript
-const routes = {
-  home: '/',
-  about: '/about',
-  contact: '/contact',
-} as const;
+### On Fortune
 
-type Route = typeof routes[keyof typeof routes];
-// Route = '/' | '/about' | '/contact'
-\`\`\`
+* What can be given can be withdrawn. Riding euphoria is like **shorting volatility without knowing it**. Respect reversion.
 
-## Conclusion
+### On Work & Craft
 
-These TypeScript patterns will help you write more robust and maintainable code. Start incorporating them into your projects today!
-  `,
+* Impact scale is irrelevant: “A few is enough. One is enough. None is enough.” Do the work **for its own integrity**.
+
+### On Contentment
+
+* Self-contented ≠ friendless. The wise **need nothing** but still **prefer much**: eyes, hands, friends — chosen freely, not out of inner poverty.
+
+### On Faults
+
+* Don’t memorize gurus. **Knowing** is when the principle has migrated from memory to muscle. Stop living in someone else’s shadow.
+
+### On Pain
+
+* Extremes can exhaust themselves; thresholds exist. Much suffering is **opinion-amplified** — we rehydrate old pain in the present.
+
+### On Luck
+
+* The luckiest is the one **who needs least from luck**. Mastery is self-mastery, not world-mastery.
+
+### On Calamity
+
+* Nothing is durable — person, city, institutions. Expect **out-of-distribution events**; build character that generalizes.
+
+---
+
+## Rules I Underlined (portable, actionable)
+
+* **Don’t imitate; don’t hate.** Withdraw from mass vice without becoming its mirror.
+* **Associate upward.** Seek people you can improve and who improve you.
+* **Never trust prosperity; never yield to adversity.** Assume Fortune does as she pleases.
+* **Treat every gain as rented.** Possess without fear by practicing loss.
+* **Train for death.** Familiarity deletes panic; priorities sort themselves.
+* **Sow friendship.** If you start for a payoff, you’ll end for a payoff.
+* **Live by nature’s limits.** Desires that end are safe; endless ones enslave.
+
+---
+
+## My Operating Checklist (how I’ll use this)
+
+* **When anxious about outcomes:** cut to **one present action**.
+* **When tempted by status buys:** “Would thatch do?” If yes, skip the marble.
+* **When social energy scatters:** choose **one person** over **one crowd**.
+* **When I win:** tag as **loaned**, not **owned**.
+* **When I lose:** practice the counterfactual life-without-X.
+* **Nightly:** 5-minute self-trial; no theatrics, just verdicts and next steps.
+
+---
+
+## Closing
+
+Seneca isn’t asking for heroics; he’s asking for **discipline in small, repeatable choices**. If I do that, Fortune can take her swings — the operating system stays up.
+
+*If you’ve read Seneca, what line actually changed your behavior — not just your mood?*
+`,
 };

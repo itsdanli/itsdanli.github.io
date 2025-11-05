@@ -171,11 +171,11 @@ export default function Contact() {
                     <div>
                       <div className="font-medium text-foreground mb-1">Email</div>
                       <a
-                        href="mailto:contact@example.com"
+                        href="mailto:dli1@outlook.com"
                         className="hover:text-foreground transition-colors underline-offset-4 hover:underline"
                         data-testid="link-email"
                       >
-                        contact@example.com
+                        dli1@outlook.com
                       </a>
                     </div>
                   </div>
