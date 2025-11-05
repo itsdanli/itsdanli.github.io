@@ -13,8 +13,8 @@ export default function Home() {
               Hi, I'm Dan
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8" data-testid="text-hero-subtitle">
-              A technologist passionate about building elegant solutions to complex problems.
-              I create performant, accessible web applications that users love.
+A former trader turned technologist working to make healthcare systems more transparent.
+I design data automation workflows that help organizations uncover insights and improve patient outcomes.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" data-testid="button-view-projects">
@@ -38,15 +38,15 @@ export default function Home() {
               About Me
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
-              <p>
-                I'm a full-stack developer with a keen eye for design and a passion for creating
-                seamless user experiences. With expertise in modern web technologies, I build
-                applications that are fast, accessible, and delightful to use.
-              </p>
-              <p>
-                When I'm not coding, you'll find me exploring new technologies, contributing to
-                open source, or writing about web development on my blog.
-              </p>
+<p>
+  I’m a former trader turned technologist focused on improving healthcare systems. 
+  After an early-stage cancer diagnosis, I experienced firsthand how opaque and fragmented the U.S. healthcare system can be. 
+  Motivated to make a difference, I’ve been applying my analytical and technical background to help make these systems more transparent and effective for patients and providers alike.
+</p>
+<p>
+  Outside of work, you’ll usually find me outdoors—climbing, training Brazilian jiu-jitsu, or skiing in the Rockies.
+</p>
+
             </div>
             <div className="mt-8">
               <Button asChild variant="outline" data-testid="button-learn-more">
