@@ -15,7 +15,7 @@ export default function About() {
       title: "Application Operations Engineer",
       company: "Partners Group",
       description:
-        "Automated complex ETL processes with Python and SQL; drove durable fixes via root-cause analysis in ServiceNow. Led user training and authored platform documentation to improve adoption of the eFront ecosystem.",
+        "Automated complex ETL processes with Python and SQL; drove durable fixes via root-cause analysis. Led user training and authored platform documentation.",
     },
     {
       year: "2020–2023",
@@ -29,7 +29,7 @@ export default function About() {
   const skills = [
     // Languages & Data
     "Python",
-    "SQL (Postgres, MS SQL Server)",
+    "SQL",
     "Bash",
     "HTML",
     // Platforms & Tools
@@ -58,7 +58,7 @@ export default function About() {
           <AnimatedSection delay={100}>
             <div className="space-y-6 text-lg leading-relaxed">
               <p className="text-muted-foreground">
-                I’m <strong>Dan Li</strong>, a <strong>Technical Customer Success Manager at Plenful</strong>. I design and implement
+                I’m <strong>Dan Li</strong>, currently a <strong>Technical Customer Success Manager at Plenful</strong>. I design and implement
                 Python/SQL data automations and visualization pipelines that improve 340B compliance and operational efficiency
                 for enterprise health systems.
               </p>
@@ -68,7 +68,7 @@ export default function About() {
                 scalable systems that create measurable impact.
               </p>
               <p className="text-muted-foreground">
-                Current interests: expanding audit coverage with deterministic rule engines, reducing manual review time with
+                Current responsibilities: expanding audit coverage with deterministic rule engines, reducing manual review time with
                 clear exception surfacing, and tightening feedback loops between end users, product, and engineering.
               </p>
             </div>
