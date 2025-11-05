@@ -1,7 +1,10 @@
 import type { BlogPostMeta } from "@shared/schema";
 
 export const blogPosts: BlogPostMeta[] = [
-{ slug: "letters-from-a-stoic-notes", title: "Letters from a Stoic — Field Notes on Living Well in a Noisy World", description: "My distilled takeaways from Seneca: fear vs. hope, friendship, wealth, crowds, and how to practice a durable kind of freedom.", date: "2025-11-05", tags: ["Stoicism", "Philosophy", "Book Notes", "Seneca"], readTime: 8 },
+{ slug: "letters-from-a-stoic-notes", 
+  title: "Letters from a Stoic — Field Notes on Living Well in a Noisy World", 
+  description: "My distilled takeaways from Seneca: fear vs. hope, friendship, wealth, crowds, and how to practice a durable kind of freedom.", 
+  date: "2025-11-05", tags: ["Stoicism", "Philosophy", "Book Notes"], readTime: 8 },
 ];
 
 export const blogPostContent: Record<string, string> = {
