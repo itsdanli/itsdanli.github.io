@@ -134,7 +134,7 @@ That’s the kind of wealth I’d like to work toward.
 
 ## “This Is Water”: Choosing Awareness in the Everyday
 
-When I first encountered David Foster Wallace’s “This Is Water,” it didn’t feel like a graduation speech — it felt like a wake-up call. I teared up listening to it because it struck something real — some quiet corner of myself that had gone unnoticed. Recently, I revisited it again, as I often do, to remind myself of its simple but radical message.
+When I first encountered David Foster Wallace’s “[This Is Water](https://www.youtube.com/watch?v=DCbGM4mqEVw),” it didn’t feel like a graduation speech — it felt like a wake-up call. I teared up listening to it because it struck something real — some quiet corner of myself that had gone unnoticed. Recently, I revisited it again, as I often do, to remind myself of its simple but radical message.
 
 In a world that runs almost entirely on mental autopilot, Wallace offered something quietly revolutionary: the idea that the true value of education isn’t about being smarter or achieving more. It’s about learning **how to think**, and doing it consciously, deliberately, and with compassion.
 
