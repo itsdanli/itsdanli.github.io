@@ -18,13 +18,4 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/itsdanli",
     featured: true,
   },
-  {
-    id: "3",
-    title: "Weather Dashboard",
-    description: "An elegant weather dashboard that displays current conditions, forecasts, and historical data with beautiful visualizations.",
-    techStack: ["React", "Chart.js", "OpenWeather API", "CSS Modules"],
-    githubUrl: "https://github.com/itsdanli",
-    demoUrl: "https://example.com",
-    featured: false,
-  },
 ];
