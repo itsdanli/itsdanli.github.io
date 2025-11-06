@@ -13,8 +13,8 @@ export default function Home() {
               Hi, I'm Dan
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8" data-testid="text-hero-subtitle">
-A former trader turned technologist working to make healthcare systems more transparent.
-I design data automation workflows that help organizations uncover insights and improve patient outcomes.
+            A technologist working to make healthcare systems more transparent.
+            I design data automation workflows that help organizations uncover insights and improve patient outcomes.
             </p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" data-testid="button-view-projects">
