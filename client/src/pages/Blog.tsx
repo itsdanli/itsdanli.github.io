@@ -22,7 +22,7 @@ export default function Blog() {
               Blog
             </h1>
             <p className="text-lg text-muted-foreground max-w-prose leading-relaxed mb-6">
-              Thoughts on finance, technology, healthcare, life.
+              Assortment of thoughts and notes.
             </p>
             
             <div className="flex flex-wrap gap-2">
