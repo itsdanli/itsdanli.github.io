@@ -10,161 +10,115 @@ export const blogPosts: BlogPostMeta[] = [
 export const blogPostContent: Record<string, string> = {
 "letters-from-a-stoic-notes": `
 
-# Letters from a Stoic — Field Notes on Living Well in a Noisy World
 
-Seneca writes like someone debugging human life. These are my notes and reflections — filtered through my bias for systems, incentives, and practice.
-
-## Thesis in a Sentence
-
-**Freedom comes from limiting desires, training attention to the present, and surrounding yourself with the few who make you better — not from fortune, status, or crowds.**
+I’ve been rereading Seneca lately. It’s one of those books that lands differently each time you open it. Some ideas feel dated, others land like they were written yesterday — which says more about us than him. These are a few notes and thoughts that stuck with me.
 
 ---
 
-## Core Ideas (my words, Seneca’s spine)
+## On Fear, Hope, and Living in the Present
 
-### 1) Fear and Hope Are the Same Error
+Seneca writes that *“to limit desire is to cure fear”* — and the older I get, the more that line makes sense.
+He also says *“cease to hope and you will cease to fear.”* Hope and fear are just different projections of the same anxiety about the future. Hope is just fear with better PR.
 
-* *“Cease to hope and you will cease to fear.”* Both are projections. They suspend the mind in a future that never arrives.
-* Practice: return to the **present task**. If I catch myself forecasting outcomes, I swap to **next concrete action**.
-
-### 2) Admire People, Not Things
-
-* Guests should admire **how we live**, not what we own.
-* Treat earthenware like silver; treat silver like earthenware — translation: **handle basics with respect; handle luxuries without attachment**.
-
-### 3) Limit Desire → Cure Fear
-
-* Desires that cannot “come to rest” are counterfeit. Natural desires terminate (hunger, warmth); vanity does not.
-* Litmus test: *Can this desire ever feel complete?* If not, it’s an algorithm for anxiety.
-
-### 4) Crowd Dynamics Corrupt Character
-
-* “A single man is a crowd; a crowd is a single man.” Exposure is a vector: **vices scale through proximity**.
-* Default posture: **avoid mass moods**. Choose **small circles** where improvement is mutual.
-
-### 5) Friendship as a Practice, Not a Transaction
-
-* Fair-weather friendships flee at the first margin call.
-* Sow > harvest: the **act of befriending** is richer than the possession of “having friends.”
-* Rule: never recruit friends for utility; else, **utility will dissolve them**.
-
-### 6) Wealth Without Fear (or: Own things that can’t own you)
-
-* It’s fine to possess riches; the danger is **being possessed by the fear of losing them**.
-* Train the counterfactual: *Could I live well without this?* If yes, wealth becomes optional, not oxygen.
-
-### 7) Death as a Daily Drill
-
-* Rehearsing death is rehearsing freedom. Familiarity erases the slave-master called **fear**.
-* Audit: are my “brave stances” real or performance? Death is the ultimate code review.
-
-### 8) Change of Place ≠ Change of Self
-
-* Travel is a new viewport, not a new operating system.
-* If I move without inner refactor, I just **re-deploy the same bugs** in a different region.
-
-### 9) Philosophy Is Operational
-
-* Not wordplay: it **orders life**, **regulates conduct**, and tells you **what to do or leave undone**.
-* Metrics are behavioral: sleep, food, speech, anger, generosity — not quotes remembered.
+We’re rarely miserable because of what’s happening **right now**; it’s usually because our minds are forecasting possible futures and catastrophes.
+If I can keep my attention anchored to what’s actually in front of me, the noise quiets down. It’s not enlightenment — it’s just less turbulence.
 
 ---
 
-## Practices I’m Keeping
+## On Desire and the Trap of Fortune
 
-1. **Present Tense Protocol**
+Seneca warns about mistaking gifts from fortune as things we “own.” That hit me. The idea that anything given can be taken — health, success, people, money — sounds bleak, but it’s actually freeing.
+You stop clutching at things so tightly once you realize they were never really yours.
 
-   * When I notice hope/fear loops, I ask: *What’s the smallest present-tense move?* Send the email, write the paragraph, make the call.
-
-2. **Poverty Rehearsal**
-
-   * Periodically live with less on purpose: simple food, simple clothes, simple routine. This deletes dependency and resets the baseline.
-
-3. **Friendship Filter**
-
-   * Pick for **virtue-acceleration**, not access. If either of us grows more honest, calmer, or braver from contact, we keep compounding.
-
-4. **Crowd Hygiene**
-
-   * Limit exposure to the moral noise floor. High-signal conversation beats any algorithmic feed.
-
-5. **Attachment Audit**
-
-   * For any “win” delivered by Fortune: label it **a loan, not a property**. If it can be taken, it never was me.
-
-6. **Anger as Insanity, Not Spice**
-
-   * Don’t goal-seek “moderate anger.” Treat it as a full-system failure; reboot to sanity.
-
-7. **Evening Self-Review**
-
-   * Daily court: *What did I do well? What did I do poorly? What will I do differently?* Be my own prosecutor and defender.
+He says: **“Your food should appease your hunger, your drink your thirst, your house protect you from the weather.”**
+There’s no moral upgrade between a thatch roof and marble columns. It’s a reminder that comfort doesn’t equal progress — it’s just insulation.
 
 ---
 
-## Notes by Theme (condensed from margins)
+## On Crowds and Moral Contagion
 
-### On Home & Status
+One of the most counterintuitive ideas in the letters is how dangerous the crowd is.
+Not because people are bad — but because moods are contagious.
+Seneca basically says: spend enough time in a crowd and you’ll leave with someone else’s vices.
+It’s true today in a different form. The “crowd” just happens to be online now.
 
-* The “good life” doesn’t require marble; **thatch roofs keep out rain** just as well. Only the **spirit** is admirable when it’s firm against the external.
-
-### On Fortune
-
-* What can be given can be withdrawn. Riding euphoria is like **shorting volatility without knowing it**. Respect reversion.
-
-### On Work & Craft
-
-* Impact scale is irrelevant: “A few is enough. One is enough. None is enough.” Do the work **for its own integrity**.
-
-### On Contentment
-
-* Self-contented ≠ friendless. The wise **need nothing** but still **prefer much**: eyes, hands, friends — chosen freely, not out of inner poverty.
-
-### On Faults
-
-* Don’t memorize gurus. **Knowing** is when the principle has migrated from memory to muscle. Stop living in someone else’s shadow.
-
-### On Pain
-
-* Extremes can exhaust themselves; thresholds exist. Much suffering is **opinion-amplified** — we rehydrate old pain in the present.
-
-### On Luck
-
-* The luckiest is the one **who needs least from luck**. Mastery is self-mastery, not world-mastery.
-
-### On Calamity
-
-* Nothing is durable — person, city, institutions. Expect **out-of-distribution events**; build character that generalizes.
+It’s not about isolation, it’s about **selective exposure**.
+He suggests surrounding yourself with people who make you better — and who you can make better in return.
+That mutual improvement loop is what real friendship is. Not a network, not a feed — just a handful of people trying to live decently.
 
 ---
 
-## Rules I Underlined (portable, actionable)
+## On Friendship and Self-Contentment
 
-* **Don’t imitate; don’t hate.** Withdraw from mass vice without becoming its mirror.
-* **Associate upward.** Seek people you can improve and who improve you.
-* **Never trust prosperity; never yield to adversity.** Assume Fortune does as she pleases.
-* **Treat every gain as rented.** Possess without fear by practicing loss.
-* **Train for death.** Familiarity deletes panic; priorities sort themselves.
-* **Sow friendship.** If you start for a payoff, you’ll end for a payoff.
-* **Live by nature’s limits.** Desires that end are safe; endless ones enslave.
+He makes a distinction between *having* friends and *being* one.
+That one’s quietly profound.
+
+A self-contented person doesn’t need friends to be happy — but still wants them, because friendship is natural to us.
+He’s not preaching isolation; he’s describing independence of spirit.
+The difference between being alone and being lonely.
+
+Seneca also warns against “fair-weather” friendships — the ones that evaporate when the conditions change. You see that dynamic everywhere now, especially in the way people orbit success.
+If someone becomes your friend because it benefits them, they’ll leave for the same reason.
+That’s not cynicism; it’s physics.
 
 ---
 
-## My Operating Checklist (how I’ll use this)
+## On Death, Change, and the Rehearsal of Loss
 
-* **When anxious about outcomes:** cut to **one present action**.
-* **When tempted by status buys:** “Would thatch do?” If yes, skip the marble.
-* **When social energy scatters:** choose **one person** over **one crowd**.
-* **When I win:** tag as **loaned**, not **owned**.
-* **When I lose:** practice the counterfactual life-without-X.
-* **Nightly:** 5-minute self-trial; no theatrics, just verdicts and next steps.
+The Stoics treat death like a skill you can train. “Rehearse death,” he says — meaning, practice losing things before you lose them.
+The more comfortable you are with impermanence, the less anything can own you.
+
+It’s not about being morbid. It’s about having fewer surprises.
+You can’t be free if you spend your life avoiding the topic that makes all the others urgent.
+
+He asks, almost mockingly: *“You want to live — but do you know how?”*
+That one stops me cold every time.
+
+---
+
+## On Simplicity and Character
+
+There’s a line: *“It’s a great man who can treat his earthenware like silver — and his silver like earthenware.”*
+That’s not about pottery. It’s about attitude.
+Respect the basics; don’t worship the upgrades.
+
+He keeps returning to this theme — that **poverty in accordance with nature is wealth**.
+It’s not romanticizing struggle. It’s about building a life that can’t be easily taken from you.
+
+---
+
+## On Philosophy as Practice
+
+Seneca insists philosophy isn’t theory — it’s training.
+It’s how you eat, how you handle anger, how you treat people below you.
+He says: *“Philosophy concerns one not with words, but with facts.”*
+It’s the daily debugging of your character.
+
+He also notes that no one becomes virtuous by accident. Even the best of us only have the raw material for virtue — it still has to be shaped.
+That’s a comforting kind of humility.
+
+---
+
+## What I’m Taking With Me
+
+* **Don’t imitate or hate the world.** Withdraw from mass opinion without becoming its enemy.
+* **Treat wins as loans, not trophies.** What can be given can be taken.
+* **Rehearse loss.** The less you fear endings, the more fully you can live beginnings.
+* **Be your own friend first.** You can’t give what you don’t have.
+* **Never trust prosperity; never yield to adversity.** Fortune does what she wants.
+* **Keep your desires finite.** Anything endless will enslave you.
 
 ---
 
 ## Closing
 
-Seneca isn’t asking for heroics; he’s asking for **discipline in small, repeatable choices**. If I do that, Fortune can take her swings — the operating system stays up.
+I don’t think Seneca’s goal was to make life calmer. He was trying to make people **sturdier** — less dependent on luck, noise, and public opinion.
+Reading him now feels like a reminder that resilience isn’t found in more control, but in less illusion.
 
-*If you’ve read Seneca, what line actually changed your behavior — not just your mood?*
-`,
+If there’s one line that sums the whole book for me, it’s this:
+**“A man who has no need of luck is the luckiest man of all.”**
+
+That’s the kind of wealth I’d like to work toward.
+`
+,
 };
