@@ -5,7 +5,7 @@ export default function About() {
   const timeline = [
     {
       year: "2025–Present",
-      title: "Technical Customer Success Manager",
+      title: "Technical Customer Success and Implementation Manager",
       company: "Plenful",
       description:
         "Own the technical relationship for 8+ enterprise health systems. Design Python/SQL automations and visualizations that expand 340B claims audit coverage to ~100%, reduce manual review, and surface missed revenue ($500k+ identified). Translate requirements into scalable, production-ready workflows.",
