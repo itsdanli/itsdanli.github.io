@@ -58,18 +58,10 @@ export default function About() {
           <AnimatedSection delay={100}>
             <div className="space-y-6 text-lg leading-relaxed">
               <p className="text-muted-foreground">
-                I’m <strong>Dan Li</strong>, currently a part of the <strong>Technical Customer Success Team at Plenful</strong>. I design and implement
-                Python/SQL data automations and visualization pipelines that improve 340B compliance and operational efficiency
-                for enterprise health systems.
               </p>
               <p className="text-muted-foreground">
-                My background spans finance and automation—trading equity futures at Gelber Group, then building ETL automation
-                and platform operations at Partners Group. Across roles, I focus on translating complex requirements into reliable,
-                scalable systems that create measurable impact.
               </p>
               <p className="text-muted-foreground">
-                Current responsibilities at Plenful: expanding audit coverage with deterministic rule engines, reducing manual review time with
-                clear exception surfacing, and tightening feedback loops between end users, product, and engineering.
               </p>
             </div>
           </AnimatedSection>

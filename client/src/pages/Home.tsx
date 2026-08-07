@@ -38,12 +38,10 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
 <p>
-  I’m a former trader turned technologist currently focused on improving healthcare systems. 
-  After an unexpected health scare at the beginning of 2024, I experienced firsthand how opaque and fragmented the U.S. healthcare system can be. 
-  Motivated to make a difference, I’ve been applying my analytical and technical background to help make these systems more transparent and effective for patients and providers alike.
+
 </p>
 <p>
-  Outside of work, you’ll usually find me outdoors—climbing, training Brazilian jiu-jitsu, or skiing in the Rockies.
+
 </p>
 
             </div>
