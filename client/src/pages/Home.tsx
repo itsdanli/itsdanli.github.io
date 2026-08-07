@@ -38,10 +38,10 @@ export default function Home() {
             </h2>
             <div className="space-y-4 text-lg leading-relaxed text-muted-foreground">
 <p>
-
+  I'm a former trader turned technologist, now working as a Customer Engineer at Plenful. I enjoy taking on complex problems and building practical, data-driven tools to solve them.
 </p>
 <p>
-
+  Outside of work, you'll usually find me outdoors—climbing, training Brazilian jiu-jitsu, or skiing in the Rockies.
 </p>
 
             </div>

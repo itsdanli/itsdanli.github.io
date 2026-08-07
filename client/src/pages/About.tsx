@@ -58,10 +58,10 @@ export default function About() {
           <AnimatedSection delay={100}>
             <div className="space-y-6 text-lg leading-relaxed">
               <p className="text-muted-foreground">
+                I'm a former trader turned technologist, now working as a Customer Engineer at Plenful. I enjoy taking on complex problems and building practical, data-driven tools to solve them.
               </p>
               <p className="text-muted-foreground">
-              </p>
-              <p className="text-muted-foreground">
+                Outside of work, you'll usually find me outdoors—climbing, training Brazilian jiu-jitsu, or skiing in the Rockies.
               </p>
             </div>
           </AnimatedSection>
