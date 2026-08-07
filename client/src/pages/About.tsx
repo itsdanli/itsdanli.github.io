@@ -5,24 +5,24 @@ export default function About() {
   const timeline = [
     {
       year: "2025–Present",
-      title: "Technical Customer Success and Implementation Manager",
+      title: "Customer Engineer",
       company: "Plenful",
       description:
-        "Own the technical relationship for 8+ enterprise health systems. Design Python/SQL automations and visualizations that expand 340B claims audit coverage to ~100%, reduce manual review, and surface missed revenue ($500k+ identified). Translate requirements into scalable, production-ready workflows.",
+        "Own the technical relationship for strategic enterprise accounts, from pre-sales through onboarding and expansion. Built production AI tools for SQL automation and compliance support, quantifying $10M+ in recoverable revenue for customers.",
     },
     {
       year: "2023–2025",
-      title: "Application Operations Engineer",
+      title: "Business Application Specialist",
       company: "Partners Group",
       description:
-        "Automated complex ETL processes with Python and SQL; drove durable fixes via root-cause analysis. Led user training and authored platform documentation.",
+        "Built and maintained ETL pipelines in Python and SQL on regulated financial data platforms; automated high-volume workflows and drove adoption of internal data systems.",
     },
     {
       year: "2020–2023",
-      title: "Trader",
+      title: "Senior Trader",
       company: "Gelber Group",
       description:
-        "Built a Python backtesting engine and analytics dashboards to optimize hedge ratios and execution; reduced transaction costs and accelerated data-driven decision making for the team.",
+        "Built Python systems for execution analytics, risk, and performance reporting; automated recurring data workflows and cut per-trader transaction costs 25%.",
     },
   ];
 
