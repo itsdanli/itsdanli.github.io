@@ -1,6 +1,14 @@
 import type { Project } from "@shared/schema";
 
 export const projects: Project[] = [
+  {
+    id: "weeknight-planner",
+    title: "Weeknight Planner",
+    description: "A weeknight meal planner for busy weeks — plan meals, auto-generate grocery lists, and keep a searchable recipe library, all to make things simpler.",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://itsdanli.github.io/meal-planner/",
+    featured: true,
+  },
   // {
   //   id: "1",
   //   title: "Portfolio Website",
