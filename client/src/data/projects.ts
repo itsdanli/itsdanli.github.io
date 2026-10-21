@@ -6,7 +6,7 @@ export const projects: Project[] = [
     title: "Weeknight Planner",
     description: "A weeknight meal planner for busy weeks — plan meals, auto-generate grocery lists, and keep a searchable recipe library, all to make things simpler.",
     techStack: ["HTML", "CSS", "JavaScript"],
-    demoUrl: "https://itsdanli.github.io/meal-planner/",
+    demoUrl: "https://weeknight-planner.dli1.workers.dev/",
     featured: true,
   },
   // {

@@ -5,24 +5,24 @@ export default function About() {
   const timeline = [
     {
       year: "2025–Present",
-      title: "Customer Engineer",
+      title: "Forward Deployed Engineer",
       company: "Plenful",
       description:
-        "Own the technical relationship for strategic enterprise accounts, from pre-sales through onboarding and expansion. Built production AI tools for SQL automation and compliance support, quantifying $10M+ in recoverable revenue for customers.",
+        "Own discovery through production deployment for 10 enterprise health-system accounts, as sole technical owner of 6 automation solutions built from scratch. Took one health system's audit coverage from under 1% to 100% of claims, built Plenful's first virtual inventory engine for Medicare drug price disputes, and confirmed $10M+ in recoverable revenue for customers.",
     },
     {
       year: "2023–2025",
       title: "Business Application Specialist",
       company: "Partners Group",
       description:
-        "Built and maintained ETL pipelines in Python and SQL on regulated financial data platforms; automated high-volume workflows and drove adoption of internal data systems.",
+        "Built and maintained production ETL pipelines in Python and SQL (Snowflake, T-SQL) on regulated financial data; traced recurring data failures to root cause and automated high-volume manual workflows for operations and technology teams.",
     },
     {
       year: "2020–2023",
       title: "Senior Trader",
       company: "Gelber Group",
       description:
-        "Built Python systems for execution analytics, risk, and performance reporting; automated recurring data workflows and cut per-trader transaction costs 25%.",
+        "Built Python systems for execution analytics, real-time P&L and risk dashboards, and performance reporting; re-engineered execution logic to cut per-trader transaction costs 25% and automated 80% of recurring data workflows.",
     },
   ];
 
@@ -30,19 +30,21 @@ export default function About() {
     // Languages & Data
     "Python",
     "SQL",
-    "Bash",
-    "HTML",
-    // Platforms & Tools
-    "AWS",
-    "GitLab",
+    "Postgres",
+    "Snowflake",
+    "T-SQL",
+    "ETL Pipelines",
+    "Data Reconciliation",
+    // Delivery & Domain
+    "Technical Discovery",
+    "Solution Design",
+    "Production Deployment",
+    "Healthcare Claims Data",
+    // Tools & Certifications
+    "AWS Cloud Practitioner",
     "Jira",
     "Confluence",
-    "ServiceNow",
-    "Control-M",
-    "Excel",
-    // Focus Areas
-    "Data Automation",
-    "Data Visualization"
+    "Gong"
   ];
 
   return (
@@ -58,7 +60,7 @@ export default function About() {
           <AnimatedSection delay={100}>
             <div className="space-y-6 text-lg leading-relaxed">
               <p className="text-muted-foreground">
-                I'm a former trader turned technologist, now working as a Customer Engineer at Plenful. I enjoy taking on complex problems and building practical, data-driven tools to solve them.
+                I'm a former trader turned technologist, now a Forward Deployed Engineer at Plenful, where I turn messy enterprise healthcare data into production automation for health systems. I enjoy taking on complex problems and building practical, data-driven tools to solve them.
               </p>
               <p className="text-muted-foreground">
                 Outside of work, you'll usually find me outdoors—climbing, training Brazilian jiu-jitsu, or skiing in the Rockies.
